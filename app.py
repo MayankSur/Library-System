@@ -4,6 +4,9 @@ import json
 from bookmodel import *
 from settings import *
 
+#Creates DB
+db.create_all()
+
 #Any app.routes not defined are automatically defined as a GET request
 #This can be defined as the main page
 @app.route('/')
@@ -116,6 +119,5 @@ def removeBook(isbn):
         response = Response("",404,mimetype='application/json')
         return response
 
-app.run(host='0.0.0.0',port = 4000)
-#Initialise the DB
-db.create_all()
+
+app.run(host='0.0.0.0',port = 4000, debug=False)

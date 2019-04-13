@@ -18,5 +18,10 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
+#Initialise the DB
+CMD [ "setup_db.py"]
 
-CMD [ "app.py" ]
+ENTRYPOINT [ "python" ]
+
+#Initialise the flask app
+CMD ["app.py" ]
