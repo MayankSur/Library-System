@@ -116,4 +116,10 @@ def removeBook(isbn):
         response = Response("",404,mimetype='application/json')
         return response
 
-app.run(port = 5000)
+app.run(port = 4000)
+#Initialise the DB
+db.create_all()
+# #Create the first Entry
+# new_book = Book(name= "First Book", price = 29.99, isbn = 100)
+# db.session.add(new_book)
+# db.session.commit()
