@@ -13,7 +13,7 @@ def hello_world():
 #Defined as the books resource page / catalog
 @app.route('/books')
 def get_books():
-    return jsonify({'Books' : Book.get_all_books()})
+    return jsonify({'Books' : Book.get_all_books()}, )
 
 #Specific book Search
 @app.route('/books/<int:isbn>')
