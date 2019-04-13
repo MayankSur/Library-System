@@ -5,7 +5,7 @@ from bookmodel import *
 from settings import *
 
 #Creates DB
-db.create_all()
+#db.create_all()
 
 #Any app.routes not defined are automatically defined as a GET request
 #This can be defined as the main page
